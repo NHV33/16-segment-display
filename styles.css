@@ -1,0 +1,90 @@
+:root {
+  --box-width: 55px;
+  --box-height: 55px;
+  --color-front: #007bff;
+  --color-back: #00000000;
+}
+
+body {
+  background-color: #000;
+}
+
+.container-col {
+  width: 98vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#input-box {
+  text-align: center;
+  width: 80%;
+  margin-top: 40px;
+  border-radius: 100px;
+  padding: 10px 30px 10px 30px;
+  background-color: slategrey;
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  outline: none;
+  border: solid 2px rgb(174, 175, 177);
+  box-shadow: 0px 0px 15px var(--color-front);
+}
+
+#display-box {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+}
+
+.segment-container {
+  flex-basis: 1;
+  margin: calc(var(--box-height) / 4);
+  height: var(--box-height);
+  width: var(--box-width);
+  background: #000;
+  position: relative;
+  background-color: var(--color-back);
+}
+
+.line {
+  visibility: hidden;
+  position: absolute;
+  background-color: var(--color-front);
+  border-radius: 100px;
+  box-shadow: 0px 0px 15px var(--color-front);
+}
+
+.hori {
+  width: calc(var(--box-width) / 2);
+  height: calc(var(--box-height) / 16);
+}
+
+.vert {
+  width: calc(var(--box-width) / 16);
+  height: calc(var(--box-height) / 2);
+}
+
+.diag {
+  --side-a: calc((var(--box-width) / 2) - (var(--box-width) / 32));
+  --side-b: calc((var(--box-height) / 2) - (var(--box-height) / 32));
+  width: calc(hypot(var(--side-a), var(--side-b)) - var(--box-width) / 32);
+  height: calc(var(--box-height) / 16);
+}
+
+.up-left { transform: rotate(-45deg); transform-origin: top left;}
+.down-left { transform: rotate(45deg ); transform-origin: bottom left;}
+.up-right { transform: rotate(45deg ); transform-origin: top right; right: 0; }
+.down-right { transform: rotate(-45deg); transform-origin: bottom right; right: 0; }
+
+.top { top: 0; }
+.bottom { bottom: 0; }
+.left { left: 0; }
+.right { right: 0; }
+.midx { left: calc((var(--box-width) / 2) - (var(--box-width) / 32)); }
+.midy { top: calc((var(--box-height) / 2) - (var(--box-height) / 32)); }

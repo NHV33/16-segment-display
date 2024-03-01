@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <template id="display-segment">
+    <div class="segment-container">
+      <div class="line hori top left"></div>
+      <div class="line hori top right"></div>
+      <div class="line vert top right"></div>
+      <div class="line vert bottom right"></div>
+      <div class="line hori bottom right"></div>
+      <div class="line hori bottom left"></div>
+      <div class="line vert bottom left"></div>
+      <div class="line vert top left"></div>
+
+      <div class="line diag up-left midy"></div>
+      <div class="line diag up-right midy"></div>
+      <div class="line diag down-right midy"></div>
+      <div class="line diag down-left midy"></div>
+
+      <div class="line vert midx top"></div>
+      <div class="line hori midy right"></div>
+      <div class="line vert midx bottom"></div>
+      <div class="line hori midy left"></div>
+    </div>
+  </template>
+
+  <body>
+    <div class="container-col">
+      <input id="input-box" placeholder="Type a message..." type="text">
+      <div style="margin: 20px; font-family: monospace; color: white;">Adjust Size</div>
+      <input type="range" name="size-slider" id="size-slider" min="10" max="80">
+      <div id="display-box">
+    </div>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
